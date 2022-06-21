@@ -1,13 +1,261 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Montserrat', poppins, sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.NavbarContainer {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 85px;
+  transition: height ease-in .4s, box-shadow ease-in .5s;
+}
+
+.NavbarContainer.active {
+  height: 75px;
+  box-shadow: 0px 0px 20px 2px #c0c0c0f3;
+}
+
+.fa-user:hover {
+  color: #333333;
+}
+
+.fa-solid.fa-angle-down {
+  margin: 5px;
+  font-size: 15px;
+}
+
+@media (max-width: 990px) {
+  .NavbarContainer {
+    height: auto;
+  }
+}
+
+
+
+/* Banner Responsive */
+.banner-title-h2 {
+  font-size: 48px;
+  margin: 0px;
+}
+
+.banner-title-h4 {
+  font-size: 18px;
+  margin: 20px 0px 50px 0px;
+}
+
+.banner-title-h2,
+.banner-title-h4 {
+  transition: font-size .5s;
+}
+
+@media (max-width: 1200px) {
+  .banner-title-h2 {
+    font-size: 46px;
+  }
+
+  .banner-title-h4 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 990px) {
+  .banner-title-h2 {
+    font-size: 25px;
+  }
+
+  .banner-title-h4 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 575px) {
+  .banner-title-h2 {
+    text-align: left;
+  }
+
+  .banner-title-h4 {
+    text-align: left;
+  }
+}
+
+/* Desire Category */
+.category-area-icon-title {
+  margin: 0px 35px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+
+}
+
+.orange {
+  color: #c63,
+}
+
+.purple {
+  color: #7264e5,
+}
+
+.green {
+  color: #50cc59,
+}
+
+.yellow {
+  color: #daa91f,
+}
+
+.blue {
+  color: #1e27f9,
+}
+
+.grey {
+  color: #726f6f,
+}
+
+.sky {
+  color: #1783b6,
+}
+
+.pink {
+  color: #c455bf,
+}
+
+.darkorange {
+  color: #c66,
+}
+
+.darkgreen {
+  color: #116e18,
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+  .category-area-icon-title {
+    margin: 0px 15px;
+  }
+}
+
+
+/* Recent Jobs Filter */
+.RecentJobsFilter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 25px;
+  border: 0.5px solid #3bbe4b;
+  background-color: white;
+  color: #333333;
+  font-family: montserrat;
+  box-shadow: inset 0 0 0 0 #3bbe4b;
+  font-size: 16px;
+  font-weight: 500;
+  transition: box-shadow ease-out 0.5s, color ease 0.3s;
+}
+
+.RecentJobsFilter.active {
+  background-color: #3bbe4b;
+  color: white;
+}
+
+.RecentJobsFilter:hover {
+  color: white;
+  box-shadow: inset 110px 0 0 0 #3bbe4b;
+  cursor: pointer;
+}
+
+
+@media (max-width: 990px) {
+  .RecentJobsFilter {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+
+@media (max-width: 770px) {
+  .RecentJobsFilter {
+    font-size: 14px;
+    padding: 20px;
+    height: 37px;
+  }
+}
+
+
+/* Popular Area */
+.fa-file-image .fa-hospital .fa-money-bills .fa-people-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3bbe4b;
+  align-items: center;
+}
+
+
+/* Popular Company */
+.rec-arrow {
+  display: none;
+}
+
+/* @media (max-width: 1200px) {
+  .rec-carousel{
+    background-color: #1e27f9;
+    width: 1200px;  
+  }
+  .rec-item-wrapper {
+    background-color: #116e18;
+    width: 100%;
+  }
+} */
+
+/* App Area */
+@keyframes MoveUpDown {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes MoveRightLeft {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-15px);
+  }
+}
+
+.fa-angle-right {
+  margin-right: 5px;
 }
